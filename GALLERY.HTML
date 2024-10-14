@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .photo {
+            display: none;
+        }
+        .photo.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+     <header>
+        <h1>In Other News</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+               <ul>
+               <li><a href="INDEX.HTML">Home</a></li>
+               <li><a href="ARTICLE.HTML">Article</a></li>
+               <li><a href="GALLERY.HTML">Gallery</a></li>
+           </ul>
+       </nav>
+    </header>
+
+    <main class="photo-gallery">
+        <div class="photo">
+            <img src="https://i.pinimg.com/564x/3c/e4/fd/3ce4fd09ac934c334780a94c8c43a821.jpg" alt="Dog1"></div>
+        <div class="photo">
+            <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/rockcms/2022-08/220805-border-collie-play-mn-1100-82d2f1.jpg" alt="Dog2"></div>
+        <div class="photo">
+                <img src="https://cdn.outsideonline.com/wp-content/uploads/2023/03/Funny_Dog_H.jpg?crop=16:9&width=960&enable=upscale&quality=100" alt="Dog3"></div>
+    
+     <div class="gallery-controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+    </main>
+
+    <script>
+        const photos=document.querySelectorAll('.photo');
+        let currentIndex = 0;
+
+        function showPhoto(index) {
+            photos.forEach(photo => photo.classList.remove('active'));
+            photos[index].classList.add('active');
+        }
+    document.getElementById('prev').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+        showPhoto(currentIndex);
+    });
+    document.getElementById('next').addEventListener('click',() => {
+        currentIndex = (currentIndex + 1) % photos.length;
+        showPhoto(currentIndex);
+    });
+    showPhoto(currentIndex);
+
+    </script>
+</body>
+</html>

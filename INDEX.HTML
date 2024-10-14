@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper Landing Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>In Other News</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+               <ul>
+               <li><a href="INDEX.HTML">Home</a></li>
+               <li><a href="ARTICLE.HTML">Article</a></li>
+               <li><a href="GALLERY.HTML">Gallery</a></li>
+           </ul>
+       </nav>
+    </header>
+
+    <main>
+        <section class="featured-article">
+            <h1>Featured Article</h1>
+            <header class="article-header">
+                <h2>Is Owning A Dog Good For Your Health?</h2>
+                <p>By Tania Signal / October 6, 2024 8:02pm EDT</p>
+            </header>
+        <main class="article-content">
+            <section>
+                <div class="photo"><img src="https://cdn.shopify.com/s/files/1/0607/8303/4594/files/intro.png?v=1683510337" alt="Intro pic"></div>
+            </section>
+        </section>
+        <section class="Latest News">
+            <h1>Latest News</h1>
+            <header class="article-header">
+                 <h2>Florida man accused of throwing chihuahua off hotel balcony 'like a football,' deputies say</h2>
+                 <div class= "photo"><img src="https://images.foxtv.com/static.fox35orlando.com/www.fox35orlando.com/content/uploads/2024/09/764/432/Dalton-Sousa-1.jpg?ve=1&tl=1" alt="Florida Man 1"></div>
+                 <header class="article-header">
+                    <h2>Florida man assaults mom with spaghetti sauce, hides in bushes from police: affidavit</h2>
+                    <div class= "photo"><img src="https://images.foxtv.com/static.fox35orlando.com/www.fox35orlando.com/content/uploads/2024/08/932/524/Anthony-Fiacco.jpg?ve=1&tl=1" alt="Florida Man 2"></div>
+        </section>
+    </main>
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+    <footer>
+        <p>Contact us at inothernews.com</p>
+    </footer>
+</body>
+</html>
